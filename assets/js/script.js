@@ -96,15 +96,12 @@ let colorChanger = function() {
     for (i = 0; i < 9; i++) {
         var checkTime = i+9;
         var textAreaId = ("#") + checkTime;
-        console.log(checkTime, textAreaId, hour);
         
-        if (checkTime < hour) {
-            $(textAreaId).addClass("future");
-            console.log("first if statement");
-        }
         if (checkTime > hour) {
+            $(textAreaId).addClass("future");
+        }
+        if (checkTime < hour) {
             $(textAreaId).addClass("past");
-            console.log("second if statement")
         }
         else {
             $(textAreaId).addClass("present");
